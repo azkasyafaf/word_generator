@@ -20,7 +20,9 @@ class Application():
                     if self.d.check(temp_out):
                         self.op.append(temp_out)
         
-        print(sorted(self.op, key=len))
+        result = sorted(self.op, reverse=False)
+        for x, y in enumerate(sorted(result, key=len)):
+            print("{} {}".format(x+1, y))
         print("\nWords found: {}".format(len(self.op)))
 
 def start(app):
