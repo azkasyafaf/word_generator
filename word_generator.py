@@ -6,6 +6,7 @@ class Application():
     def __init__(self):
         self.inp = []
         self.d = enchant.Dict("en_US")
+        self.op = set()
     
     def generator(self, inp):
         temp_out = ""
@@ -13,7 +14,8 @@ class Application():
             for word in list(permutations(inp,n)):
                 temp_out = "".join(word)
                 if this.d.check(temp_out):
-                    print(temp_out)
+                    this.op.add(temp_out)
+        print(this.op)
 
 def main():
     app = Application()
