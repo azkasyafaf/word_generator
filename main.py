@@ -17,6 +17,7 @@ class Application():
                     if self.d.check(temp_out):
                         self.op.add(temp_out)
         print(sorted(self.op, key=len))
+        print("\nWords found: {}".format(len(self.op)))
 
 def main():
     while True:
