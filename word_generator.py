@@ -19,8 +19,8 @@ class Application():
         print(self.op)
 
 def main():
-    app = Application()
     while True:
+        app = Application()
         temp_inp = input("Input your words: ")
         app.inp = [x.lower() for x in temp_inp]
         print("\n--------------\n")
@@ -34,5 +34,6 @@ def main():
             print("Exiting...\n\n")
             break
         os.system("cls")
+        app.op.clear()
 
 main()
