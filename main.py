@@ -11,7 +11,7 @@ class Application():
     def generator(self, inp):
         temp_out = ""
         for n in range(len(inp)):
-            for word in list(permutations(inp,n)):
+            for word in list(permutations(inp,n+1)):
                 temp_out = "".join(word)
                 if len(temp_out) > 2:
                     if self.d.check(temp_out):
