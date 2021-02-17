@@ -20,14 +20,14 @@ class Application():
                     if self.d.check(temp_out):
                         self.op.append(temp_out)
         
-        print(sorted(self.op, key=len, reverse=False))
+        print(sorted(self.op, key=len))
         print("\nWords found: {}".format(len(self.op)))
 
 def start(app):
-    temp_inp = input("Input your words: ")
+    temp_inp = str(input("Input your words: ").lower())
     min_length = input("What is the minimum lenght? ")
 
-    app.inp = [x.lower() for x in temp_inp]
+    app.inp = [x for x in temp_inp]
     min_length = 2 if (min_length == "") else int(min_length)
 
     print("\n--------------\n")
@@ -41,13 +41,13 @@ def main():
         start(Application())
 
         while True:
-            temp_inp = input("\nDo you want to try again? (Y/N) ")
+            temp_inp = input("\nDo you want to try again? (Y/N) ").upper()
             print("\nPlease wait...\n")
             
-            if temp_inp.upper() == "N":
+            if temp_inp == "N":
                 running = False
                 break
-            elif temp_inp.upper() == "Y":
+            elif temp_inp == "Y":
                 os.system("clear")
                 break
             else:
