@@ -16,7 +16,7 @@ class Application():
                 if len(temp_out) > 2:
                     if self.d.check(temp_out):
                         self.op.add(temp_out)
-        print(self.op)
+        print(sorted(self.op, key=len))
 
 def main():
     while True:
