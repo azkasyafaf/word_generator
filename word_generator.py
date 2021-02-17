@@ -13,9 +13,9 @@ class Application():
         for n in range(len(inp)):
             for word in list(permutations(inp,n)):
                 temp_out = "".join(word)
-                if this.d.check(temp_out):
-                    this.op.add(temp_out)
-        print(this.op)
+                if self.d.check(temp_out):
+                    op.add(temp_out)
+        print(self.op)
 
 def main():
     app = Application()
