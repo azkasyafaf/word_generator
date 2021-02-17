@@ -8,17 +8,17 @@ class Application():
     def __init__(self):
         self.inp = []
         self.d = enchant.Dict("en_US")
-        self.op = set()
+        self.op = []
     
     def generator(self, inp, minLength = 2):
-        self.op.clear()
+        self.op = []
 
         for n in range(len(inp)):
             for word in list(permutations(inp,n+1)):
                 temp_out = "".join(word)
                 if len(temp_out) > minLength:
                     if self.d.check(temp_out):
-                        self.op.add(temp_out)
+                        self.op.append(temp_out)
         
         print(sorted(self.op, key=len, reverse=False))
         print("\nWords found: {}".format(len(self.op)))
