@@ -33,7 +33,7 @@ def main():
         if temp_inp.upper() == "N":
             print("Exiting...\n\n")
             break
-        os.system("cls")
+        os.system("clear")
         app.op.clear()
 
 main()
